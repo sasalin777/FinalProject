@@ -1,9 +1,21 @@
-.tic-button {
-    -fx-font: 30px "Serif";
+.title-button {
+    -fx-font: 30px "Arial";
+    -fx-text-fill: #ffffff;
     -fx-padding: 10px;
     -fx-pref-height: 90px;
     -fx-pref-width: 90px;
-    -fx-background-color: lightblue;
+    -fx-background-color: rgb(102, 102, 102);
+    -fx-background-radius: 5px;
+    -fx-width: 20px;
+}
+
+.day-button {
+    -fx-font: 25px "Arial";
+    -fx-padding: 10px;
+    -fx-pref-height: 90px;
+    -fx-pref-width: 90px;
+    -fx-background-color: rgb(226, 226, 226);
+    -fx-background-radius: 5px;
 }
 
 /* (45, 45) (255, 255) */
