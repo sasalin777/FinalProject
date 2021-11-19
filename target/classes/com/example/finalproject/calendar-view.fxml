@@ -173,20 +173,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  <!-- /////////////////////// ROW 3 /////////////////////// -->
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="7" styleClass="day-section" GridPane.columnIndex="1" GridPane.rowIndex="3" >
@@ -338,25 +324,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <!-- /////////////////////// ROW 4 /////////////////////// -->
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="14" styleClass="day-section" GridPane.columnIndex="1" GridPane.rowIndex="4" >
@@ -498,22 +465,6 @@
     </GridPane>
     <!-- /////////////////////// END SECTION DAY /////////////////////// -->
      <!-- /////////////////////// END ROW 4 /////////////////////// -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -681,32 +632,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <!-- /////////////////////// ROW 6 /////////////////////// -->
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="28" styleClass="day-section" GridPane.columnIndex="1" GridPane.rowIndex="6" >
@@ -848,9 +773,5 @@
     </GridPane>
     <!-- /////////////////////// END SECTION DAY /////////////////////// -->
      <!-- /////////////////////// END ROW 6 /////////////////////// -->
-
-
-
-
 
 </GridPane>
