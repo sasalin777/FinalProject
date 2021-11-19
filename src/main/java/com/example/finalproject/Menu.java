@@ -29,6 +29,15 @@ public class Menu {
         this.food = food;
     }
 
+    //calculateTotalKcal
+    public int getKcal() {
+        int totalKcal = 0;
+        for (int i = 0; i < food.length; i++) {
+            totalKcal += food[i].getKcal();
+        }
+        return totalKcal;
+    }
+
     public String toString() {
         String menu = "";
         for (int i = 0; i < food.length; i++) {

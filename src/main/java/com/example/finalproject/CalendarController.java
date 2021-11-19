@@ -10,7 +10,6 @@ import javafx.scene.text.Text;
 
 import java.util.Calendar;
 
-
 public class CalendarController {
 
     @FXML
