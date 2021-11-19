@@ -1,21 +1,36 @@
+/*
+https://www.colorhunt.co/palette/98ddcad5ecc2ffd3b4ffaaa7
+#98DDCA
+#D5ECC2
+#FFD3B4
+#FFAAA7
+*/
+
+/*
+https://www.colorhunt.co/palette/222831393e46d65a31eeeeee
+#222831
+#393E46
+#D65A31
+#EEEEEE
+*/
+
 .title-button {
     -fx-font: 30px "Arial";
-    -fx-text-fill: #ffffff;
+    -fx-text-fill: #98DDCA;
     -fx-padding: 10px;
     -fx-pref-height: 90px;
-    -fx-pref-width: 90px;
-    -fx-background-color: rgb(102, 102, 102);
+    -fx-pref-width: 200px;
+    -fx-background-color: #222831;
     -fx-background-radius: 5px;
-    -fx-width: 20px;
 }
 
 .day-button {
     -fx-font: 25px "Arial";
     -fx-padding: 10px;
-    -fx-pref-height: 90px;
-    -fx-pref-width: 90px;
-    -fx-background-color: rgb(226, 226, 226);
+    -fx-pref-height: 200px;
+    -fx-pref-width: 200px;
+    -fx-text-fill: #222831;
+    -fx-background-color: #EEEEEE;
     -fx-background-radius: 5px;
 }
 
-/* (45, 45) (255, 255) */
