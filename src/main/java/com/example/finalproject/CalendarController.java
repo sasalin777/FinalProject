@@ -24,8 +24,6 @@ public class CalendarController {
 
     @FXML
     protected void onHandleBefore() {
-
-
         Calendar c = Calendar.getInstance();   // this takes current date
         // change the month
         c.set(Calendar.MONTH, month);
