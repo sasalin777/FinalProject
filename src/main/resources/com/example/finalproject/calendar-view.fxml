@@ -15,13 +15,12 @@
     </HBox>
 
     <Button fx:id="btnDay0" onAction="#onHelloButtonClick" styleClass="title-button" text="Sun" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-    <Button fx:id="btnDay1" onAction="#onHelloButtonClick" styleClass="title-button" text="Tue" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-    <Button fx:id="btnDay2" onAction="#onHelloButtonClick" styleClass="title-button" text="Wed" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-    <Button fx:id="btnDay3" onAction="#onHelloButtonClick" styleClass="title-button" text="Thu" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-    <Button fx:id="btnDay4" onAction="#onHelloButtonClick" styleClass="title-button" text="Fri" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-    <Button fx:id="btnDay5" onAction="#onHelloButtonClick" styleClass="title-button" text="Sat" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-    <Button fx:id="btnDay6" onAction="#onHelloButtonClick" styleClass="title-button" text="Mon" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-
+    <Button fx:id="btnDay1" onAction="#onHelloButtonClick" styleClass="title-button" text="Mon" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+    <Button fx:id="btnDay2" onAction="#onHelloButtonClick" styleClass="title-button" text="Tue" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+    <Button fx:id="btnDay3" onAction="#onHelloButtonClick" styleClass="title-button" text="Wed" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+    <Button fx:id="btnDay4" onAction="#onHelloButtonClick" styleClass="title-button" text="Thu" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+    <Button fx:id="btnDay5" onAction="#onHelloButtonClick" styleClass="title-button" text="Fri" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+    <Button fx:id="btnDay6" onAction="#onHelloButtonClick" styleClass="title-button" text="Sat" GridPane.columnIndex="7" GridPane.rowIndex="1" />
 
     <!-- /////////////////////// ROW 2 /////////////////////// -->
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
@@ -47,7 +46,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="1" styleClass="day-section" GridPane.columnIndex="2" GridPane.rowIndex="2" >
 
-        <Label fx:id="day_1" styleClass="title_day" text="1" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_1" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_1" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -67,7 +66,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="2" styleClass="day-section" GridPane.columnIndex="3" GridPane.rowIndex="2" >
 
-        <Label fx:id="day_2" styleClass="title_day" text="2" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_2" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_2" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -87,7 +86,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="3" styleClass="day-section" GridPane.columnIndex="4" GridPane.rowIndex="2" >
 
-        <Label fx:id="day_3" styleClass="title_day" text="3" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_3" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_3" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -107,7 +106,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="4" styleClass="day-section" GridPane.columnIndex="5" GridPane.rowIndex="2" >
 
-        <Label fx:id="day_4" styleClass="title_day" text="4" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_4" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_4" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -127,7 +126,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="5" styleClass="day-section" GridPane.columnIndex="6" GridPane.rowIndex="2" >
 
-        <Label fx:id="day_5" styleClass="title_day" text="5" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_5" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_5" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -147,7 +146,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="6" styleClass="day-section" GridPane.columnIndex="7" GridPane.rowIndex="2" >
 
-        <Label fx:id="day_6" styleClass="title_day" text="6" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_6" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_6" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -164,20 +163,6 @@
     </GridPane>
     <!-- /////////////////////// END SECTION DAY /////////////////////// -->
      <!-- /////////////////////// END ROW 2 /////////////////////// -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -212,7 +197,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="8" styleClass="day-section" GridPane.columnIndex="2" GridPane.rowIndex="3" >
 
-        <Label fx:id="day_8" styleClass="title_day" text="1" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_8" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_8" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -232,7 +217,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="9" styleClass="day-section" GridPane.columnIndex="3" GridPane.rowIndex="3" >
 
-        <Label fx:id="day_9" styleClass="title_day" text="2" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_9" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_9" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -252,7 +237,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="10" styleClass="day-section" GridPane.columnIndex="4" GridPane.rowIndex="3" >
 
-        <Label fx:id="day_10" styleClass="title_day" text="3" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_10" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_10" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -272,7 +257,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="11" styleClass="day-section" GridPane.columnIndex="5" GridPane.rowIndex="3" >
 
-        <Label fx:id="day_11" styleClass="title_day" text="4" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_11" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_11" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -292,7 +277,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="12" styleClass="day-section" GridPane.columnIndex="6" GridPane.rowIndex="3" >
 
-        <Label fx:id="day_12" styleClass="title_day" text="5" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_12" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_12" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -312,7 +297,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="13" styleClass="day-section" GridPane.columnIndex="7" GridPane.rowIndex="3" >
 
-        <Label fx:id="day_13" styleClass="title_day" text="6" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_13" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_13" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -329,25 +314,6 @@
     </GridPane>
     <!-- /////////////////////// END SECTION DAY /////////////////////// -->
      <!-- /////////////////////// END ROW 3 /////////////////////// -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -382,7 +348,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="15" styleClass="day-section" GridPane.columnIndex="2" GridPane.rowIndex="4" >
 
-        <Label fx:id="day_15" styleClass="title_day" text="1" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_15" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_15" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -402,7 +368,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="16" styleClass="day-section" GridPane.columnIndex="3" GridPane.rowIndex="4" >
 
-        <Label fx:id="day_16" styleClass="title_day" text="2" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_16" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_16" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -422,7 +388,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="17" styleClass="day-section" GridPane.columnIndex="4" GridPane.rowIndex="4" >
 
-        <Label fx:id="day_17" styleClass="title_day" text="3" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_17" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_17" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -442,7 +408,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="18" styleClass="day-section" GridPane.columnIndex="5" GridPane.rowIndex="4" >
 
-        <Label fx:id="day_18" styleClass="title_day" text="4" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_18" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_18" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -462,7 +428,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="19" styleClass="day-section" GridPane.columnIndex="6" GridPane.rowIndex="4" >
 
-        <Label fx:id="day_19" styleClass="title_day" text="5" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_19" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_19" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -482,7 +448,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="20" styleClass="day-section" GridPane.columnIndex="7" GridPane.rowIndex="4" >
 
-        <Label fx:id="day_20" styleClass="title_day" text="6" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_20" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_20" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -499,22 +465,6 @@
     </GridPane>
     <!-- /////////////////////// END SECTION DAY /////////////////////// -->
      <!-- /////////////////////// END ROW 4 /////////////////////// -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -552,7 +502,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="22" styleClass="day-section" GridPane.columnIndex="2" GridPane.rowIndex="5" >
 
-        <Label fx:id="day_22" styleClass="title_day" text="1" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_22" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_22" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -572,7 +522,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="23" styleClass="day-section" GridPane.columnIndex="3" GridPane.rowIndex="5" >
 
-        <Label fx:id="day_23" styleClass="title_day" text="2" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_23" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_23" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -592,7 +542,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="24"  styleClass="day-section" GridPane.columnIndex="4" GridPane.rowIndex="5" >
 
-        <Label fx:id="day_24" styleClass="title_day" text="3" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_24" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_24" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -612,7 +562,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="25" styleClass="day-section" GridPane.columnIndex="5" GridPane.rowIndex="5" >
 
-        <Label fx:id="day_25" styleClass="title_day" text="4" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_25" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_25" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -632,7 +582,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="26" styleClass="day-section" GridPane.columnIndex="6" GridPane.rowIndex="5" >
 
-        <Label fx:id="day_26" styleClass="title_day" text="5" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_26" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_26" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -652,7 +602,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="27" styleClass="day-section" GridPane.columnIndex="7" GridPane.rowIndex="5" >
 
-        <Label fx:id="day_27" styleClass="title_day" text="6" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_27" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_27" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -669,32 +619,6 @@
     </GridPane>
     <!-- /////////////////////// END SECTION DAY /////////////////////// -->
      <!-- /////////////////////// END ROW 5 /////////////////////// -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -732,7 +656,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="29" styleClass="day-section" GridPane.columnIndex="2" GridPane.rowIndex="6" >
 
-        <Label fx:id="day_29" styleClass="title_day" text="1" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_29" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_29" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -752,7 +676,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="30" styleClass="day-section" GridPane.columnIndex="3" GridPane.rowIndex="6" >
 
-        <Label fx:id="day_30" styleClass="title_day" text="2" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_30" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_30" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -772,7 +696,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="31" styleClass="day-section" GridPane.columnIndex="4" GridPane.rowIndex="6" >
 
-        <Label fx:id="day_31" styleClass="title_day" text="3" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_31" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_31" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -792,7 +716,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="32" styleClass="day-section" GridPane.columnIndex="5" GridPane.rowIndex="6" >
 
-        <Label fx:id="day_32" styleClass="title_day" text="4" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_32" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_32" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -812,7 +736,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="33" styleClass="day-section" GridPane.columnIndex="6" GridPane.rowIndex="6" >
 
-        <Label fx:id="day_33" styleClass="title_day" text="5" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_33" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_33" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -832,7 +756,7 @@
     <!-- /////////////////////// SECTION DAY /////////////////////// -->
     <GridPane alignment="TOP_CENTER" fx:id="34" styleClass="day-section" GridPane.columnIndex="7" GridPane.rowIndex="6" >
 
-        <Label fx:id="day_34" styleClass="title_day" text="6" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="day_34" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <Label fx:id="kcal_34" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
 
         <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -849,9 +773,5 @@
     </GridPane>
     <!-- /////////////////////// END SECTION DAY /////////////////////// -->
      <!-- /////////////////////// END ROW 6 /////////////////////// -->
-
-
-
-
 
 </GridPane>

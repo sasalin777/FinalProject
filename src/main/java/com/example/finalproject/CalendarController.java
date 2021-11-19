@@ -9,6 +9,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 
 import java.util.Calendar;
+import java.util.HashMap;
 
 public class CalendarController {
 
@@ -23,6 +24,7 @@ public class CalendarController {
 
     @FXML
     protected void onHandleBefore() {
+        month--;
         Calendar c = Calendar.getInstance();   // this takes current date
         // change the month
         c.set(Calendar.MONTH, month);
@@ -32,13 +34,17 @@ public class CalendarController {
         // get day of week
         int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
 
-        title.setText("" + month-- + dayOfWeek);
+        title.setText( monthToStrng(month) + "  " + dayOfWeek);
+
+        printCalendar(month);
 
     }
 
     @FXML
     protected void onHandleNext() {
-        title.setText("" + month++);
+        month++;
+        title.setText("" + monthToStrng(month));
+        printCalendar(month);
     }
 
     @FXML
@@ -69,14 +75,8 @@ public class CalendarController {
     }
 
 
-    @FXML
-    public void initialize(){
-        // get current month
-        Calendar cal = Calendar.getInstance();
-        this.month = cal.get(Calendar.MONTH);
-        int year = cal.get(Calendar.YEAR);
-  
-
+    public String monthToStrng(int month) {
+        month--;
         // tranform month to string
         String monthStr = "";
         switch (month){
@@ -117,8 +117,24 @@ public class CalendarController {
                 monthStr = "December";
                 break;
         }
+
+        return  monthStr;
+    }
+    @FXML
+    public void initialize() {
+
+        // get current month
+        Calendar cal = Calendar.getInstance();
+        this.month = cal.get(Calendar.MONTH) + 1;
+        int year = cal.get(Calendar.YEAR);
+
+
+
+        //printCalendar(this.month);
+        printCalendar(11);
+
         // set text title
-        title.setText(monthStr + " " + year);
+        title.setText(monthToStrng(this.month) + " " + year);
     
         // get element by ID from root
         Parent root = title.getParent();
@@ -153,6 +169,94 @@ public class CalendarController {
         GridPane gridPane = (GridPane) root.lookup("#0");
         // set class for GridPane
         gridPane.getStyleClass().add("hidden");
+
+    }
+
+    public int getPaddingWeekDay(int month) {
+        Calendar c = Calendar.getInstance();   // this takes current date
+        c.set(Calendar.MONTH, month - 1);
+        c.set(Calendar.DAY_OF_MONTH, 1);
+        System.out.println(c.getTime());       // this returns java.util.Date
+
+        // get day of week
+        int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
+
+        return dayOfWeek - 2;
+    }
+
+    private void printCalendar(int month) {
+        Day[] days = getData(month);
+        // validate if is null days
+        int paddingWeekDay = getPaddingWeekDay(month);
+        if (days == null) {
+            return;
+        }
+        System.out.println("paddingWeekDay " + paddingWeekDay);
+        // iterate foreach data
+        for (Day day : days) {
+            // get parent node
+            Parent parent = title.getParent();
+            // get the day of mouth
+            int dayOfMonth = day.getDay() + paddingWeekDay;
+            System.out.println("#morning_" + dayOfMonth);
+            // get element by ID from root
+            Button btnM = (Button) parent.lookup("#morning_" + dayOfMonth);
+            Button btnA = (Button) parent.lookup("#afternoon_"+ dayOfMonth);
+            Button btnE = (Button) parent.lookup("#evening_"+ dayOfMonth);
+            Button btnS = (Button) parent.lookup("#snacks_"+ dayOfMonth);
+
+            // change text button
+            btnM.setText(day.morning.getIcon());
+            btnA.setText(day.afternoon.getIcon());
+            btnE.setText(day.evening.getIcon());
+            btnS.setText(day.snacks.getIcon());
+
+            Label labelK = (Label) parent.lookup("#kcal_"+ dayOfMonth);
+            Label labelD = (Label) parent.lookup("#day_"+ dayOfMonth);
+
+            labelK.setText(day.getTotalKcal() + " Kcal");
+            labelD.setText("" + (dayOfMonth - paddingWeekDay));
+        }
+
+    }
+
+    public Day[] getData(int month) {
+        HashMap<Integer, Day[]> m = createFakeData();
+        return m.get(month);
+    }
+
+    public HashMap<Integer, Day[]> createFakeData() {
+        // create hashmap
+        HashMap<Integer, Day[]> months = new HashMap<>();
+
+        Food[] f = {
+                new Food("Fries", 200),
+                new Food("Ice cream", 100),
+                new Food("Big burger", 300),
+                new Food("Coca cola", 50),
+                new Food("Coffee", 100),
+        };
+        Menu m = new Menu(f, "\uD83C\uDF54");
+
+        Day[] days = {
+                new Day(1,2021, m, m, m, m),
+                new Day(2,2021, m, m, m, m),
+                new Day(3,2021, m, m, m, m),
+                new Day(4,2021, m, m, m, m),
+        };
+
+        System.out.println(days[0].getTotalKcal());
+        System.out.println(days[0].morning.icon);
+
+        // add key and value
+        // november
+        months.put(10, days); // oct
+        months.put(11, days); // nov
+        months.put(12, days); // dec
+
+        //System.out.println(months.get(11)[0].toString());
+
+        return months;
 
     }
 }

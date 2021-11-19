@@ -31,6 +31,7 @@ public class Menu {
 
     //calculateTotalKcal
     public int getKcal() {
+
         int totalKcal = 0;
         for (int i = 0; i < food.length; i++) {
             totalKcal += food[i].getKcal();

@@ -3,7 +3,6 @@ package com.example.finalproject;
 public class Day {
 
   public int day;
-  public int month;
   public int year;
 
   public Menu morning;
@@ -11,9 +10,8 @@ public class Day {
   public Menu evening;
   public Menu snacks;
 
-  public Day(int day, int month, int year, Menu morning, Menu afternoon, Menu evening, Menu snacks) {
+  public Day(int day, int year, Menu morning, Menu afternoon, Menu evening, Menu snacks) {
     setDay(day);
-    setMonth(month);
     setYear(year);
     this.morning = morning;
     this.afternoon = afternoon;
@@ -22,25 +20,15 @@ public class Day {
   }
 
   public int getDay() {
-    return day;
+    return this.day;
   }
 
   public void setDay(int day) {
     // validate day is between 1 and 31
-    if (year >= 1 && year <= 31) {
+    if (day >= 1 && day <= 31) {
       this.day = day;
     }
  }
-
-  public int getMonth() {
-    return month;
-  }
-
-  public void setMonth(int month) {
-    if (isValidNumberMonth(month)) {
-      this.month = month;
-    }
-  }
 
   public boolean isValidNumberMonth(int month) {
     return month >= 1 && month <= 12;
@@ -95,6 +83,18 @@ public class Day {
 
   public int calculateTotalKcal() {
     return this.morning.getKcal() + this.afternoon.getKcal() + this.evening.getKcal() + this.snacks.getKcal();
+  }
+
+  @Override
+  public String toString() {
+    return "Day{" +
+        "day=" + day +
+        ", year=" + year +
+        ", morning=" + morning +
+        ", afternoon=" + afternoon +
+        ", evening=" + evening +
+        ", snacks=" + snacks +
+        '}';
   }
 
 }

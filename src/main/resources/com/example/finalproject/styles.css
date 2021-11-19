@@ -57,7 +57,7 @@ Button:hover {
 }
 
 .title_kcal {
-    -fx-font: 20px "Arial";
+    -fx-font: 18px "Arial";
     -fx-alignment: center;
     -fx-padding: 6px;
 }
