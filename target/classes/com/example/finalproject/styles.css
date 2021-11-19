@@ -14,32 +14,18 @@ https://www.colorhunt.co/palette/222831393e46d65a31eeeeee
 #EEEEEE
 */
 
+Button:hover {
+    -fx-cursor: hand;
+}
+
 .title-button {
     -fx-font: 30px "Arial";
     -fx-text-fill: #98DDCA;
     -fx-padding: 10px;
     -fx-pref-height: 90px;
-    -fx-pref-width: 250px;
+    -fx-pref-width: 300px;
     -fx-background-color: #222831;
     -fx-background-radius: 5px;
-}
-
-.day-button {
-    -fx-font: 25px "Arial";
-    -fx-padding: 10px;
-    -fx-pref-height: 200px;
-    -fx-pref-width: 250px;
-    -fx-text-fill: #222831;
-    -fx-background-color: #EEEEEE;
-    -fx-background-radius: 5px;
-}
-
-.title-month {
-    -fx-font: 30px "Arial";
-    -fx-text-fill: #222831;
-    -fx-padding: 10px;
-    -fx-pref-height: 90px;
-    -fx-pref-width: 300px;
 }
 
 .month-button {
@@ -55,6 +41,73 @@ https://www.colorhunt.co/palette/222831393e46d65a31eeeeee
     -fx-padding: 5px;
 }
 
-Button:hover {
-    -fx-cursor: hand;
+
+.hidden {
+-fx-pref-width: 0;
+-fx-opacity: 0;
 }
+/* ---------------- SECTION DAY ----------------------*/
+.title_day {
+    -fx-font: 25px "Arial";
+    -fx-alignment: center;
+    -fx-padding: 6px;
+
+    -fx-text-fill: #EEEEEE;
+     -fx-background-color: #393E46;
+}
+
+.title_kcal {
+    -fx-font: 20px "Arial";
+    -fx-alignment: center;
+    -fx-padding: 6px;
+}
+
+.text-field-food {
+    -fx-min-width: 50px;
+    -fx-min-height: 50px;
+    -fx-font-size: 20;
+}
+
+.day-section {
+    -fx-padding: 4px;
+    -fx-pref-height: 200px;
+    -fx-pref-width: 300px;
+    -fx-text-fill: #222831;
+    -fx-background-color: #EEEEEE;
+    -fx-background-radius: 5px;
+}
+
+.day-food-text {
+    -fx-font: 18px "Arial";
+    -fx-text-fill: #222831;
+
+    -fx-pref-height: 100px;
+    -fx-pref-width: 100px;
+
+    -fx-alignment: center;
+
+}
+
+.day-food-button {
+    -fx-font: 50px "Arial";
+    -fx-pref-height: 100px;
+    -fx-pref-width: 100px;
+    -fx-background-color: #222831;
+    -fx-padding: 4px;
+    -fx-border-insets: 4px;
+    -fx-background-insets: 4px;
+}
+
+.morning {
+-fx-background-color: #98DDCA;
+}
+.afternoon {
+-fx-background-color: #D5ECC2;
+}
+.evening {
+-fx-background-color: #FFD3B4;
+}
+.snacks {
+-fx-background-color: #FFAAA7;
+}
+/* ---------------- END SECTION DAY ----------------------*/
