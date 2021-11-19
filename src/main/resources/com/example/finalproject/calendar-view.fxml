@@ -1,13 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+
+<GridPane fx:id="gridlayout" alignment="center" hgap="10" stylesheets="@styles.css" vgap="10" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalproject.CalendarController">
 
 
-<GridPane stylesheets="@styles.css" fx:id="gridlayout" alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.172-ea" fx:controller="com.example.finalproject.CalendarController">
+    <Text fx:id="title"  styleClass="title-month" text="October 2021"
+          GridPane.columnIndex="1"
+          GridPane.rowIndex="0"/>
 
-    <Label fx:id="welcomeText"/>
+    <HBox spacing="10" alignment="bottom_right"
+          GridPane.columnIndex="7"
+          GridPane.rowIndex="0">
+
+        <Button text="Before" styleClass="month-button" onAction="#onHelloButtonClick"/>
+
+        <Text fx:id="day" styleClass="title-month" text="Today"
+              GridPane.columnIndex="2"
+              GridPane.rowIndex="0"/>
+
+        <Button text="Next" styleClass="month-button" onAction="#onHelloButtonClick"/>
+
+    </HBox>
 
     <Button fx:id="btnDay0" onAction="#onHelloButtonClick" styleClass="title-button" text="Mon" GridPane.columnIndex="1" GridPane.rowIndex="1" />
     <Button fx:id="btnDay1" onAction="#onHelloButtonClick" styleClass="title-button" text="Tue" GridPane.columnIndex="2" GridPane.rowIndex="1" />
@@ -53,8 +70,27 @@
     <Button fx:id="btn30" onAction="#onHelloButtonClick" styleClass="day-button" text="30" GridPane.columnIndex="2" GridPane.rowIndex="6" />
     <Button fx:id="btn31" onAction="#onHelloButtonClick" styleClass="day-button" text="31" GridPane.columnIndex="3" GridPane.rowIndex="6" />
 
-    <Label fx:id="player" text="" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+    <Label fx:id="calendar" text="" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
 
 </GridPane>
-
-

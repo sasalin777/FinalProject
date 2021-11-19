@@ -1,14 +1,15 @@
 package com.example.finalproject;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.text.Text;
+
 
 public class CalendarController {
     @FXML
-    private Label welcomeText;
+    private Text title;
 
     @FXML
     protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+        title.setText("Calendar!");
     }
 }

@@ -19,7 +19,7 @@ https://www.colorhunt.co/palette/222831393e46d65a31eeeeee
     -fx-text-fill: #98DDCA;
     -fx-padding: 10px;
     -fx-pref-height: 90px;
-    -fx-pref-width: 200px;
+    -fx-pref-width: 250px;
     -fx-background-color: #222831;
     -fx-background-radius: 5px;
 }
@@ -28,9 +28,33 @@ https://www.colorhunt.co/palette/222831393e46d65a31eeeeee
     -fx-font: 25px "Arial";
     -fx-padding: 10px;
     -fx-pref-height: 200px;
-    -fx-pref-width: 200px;
+    -fx-pref-width: 250px;
     -fx-text-fill: #222831;
     -fx-background-color: #EEEEEE;
     -fx-background-radius: 5px;
 }
 
+.title-month {
+    -fx-font: 30px "Arial";
+    -fx-text-fill: #222831;
+    -fx-padding: 10px;
+    -fx-pref-height: 90px;
+    -fx-pref-width: 300px;
+}
+
+.month-button {
+    -fx-font: 20px "Arial";
+    -fx-background-color: #EEEEEE;
+    -fx-background-radius: 16.4, 15;
+    -fx-background-insets: -1.4, 0;
+    -fx-border-radius: 15px;
+    -fx-border-width: 1px;
+    -fx-border-color: #393E46;
+    -fx-pref-height: 20px;
+    -fx-pref-width: 120px;
+    -fx-padding: 5px;
+}
+
+Button:hover {
+    -fx-cursor: hand;
+}
