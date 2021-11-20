@@ -14,6 +14,12 @@ https://www.colorhunt.co/palette/222831393e46d65a31eeeeee
 #EEEEEE
 */
 
+.root {
+    -fx-color1: #FFFF00;
+    -fx-color2: rgb(255,255,0);
+    -fx-color3: rgba(255,255,0, 0.5);
+}
+
 .title {
     -fx-font: 30px "Arial";
 }
@@ -27,7 +33,7 @@ Button:hover {
   -fx-text-fill: #98ddca;
   -fx-padding: 10px;
   -fx-pref-height: 90px;
-  -fx-pref-width: 300px;
+  -fx-pref-width: 250px;
   -fx-background-color: #222831;
   -fx-background-radius: 5px;
 }
@@ -51,30 +57,20 @@ Button:hover {
 }
 /* ---------------- SECTION DAY ----------------------*/
 .title_day {
-  -fx-font: 25px "Arial";
+  -fx-font: 20px "Arial";
   -fx-alignment: center;
-  -fx-padding: 6px;
-
   -fx-text-fill: #393e46;
-
 }
 
 .title_kcal {
-  -fx-font: 18px "Arial";
+  -fx-font: 15px "Arial";
   -fx-alignment: center;
-  -fx-padding: 6px;
-}
-
-.text-field-food {
-  -fx-min-width: 50px;
-  -fx-min-height: 50px;
-  -fx-font-size: 20;
 }
 
 .day-section {
   -fx-padding: 4px;
-  -fx-pref-height: 200px;
-  -fx-pref-width: 300px;
+  -fx-pref-height: 80px;
+  -fx-pref-width: 250px;
   -fx-text-fill: #222831;
   -fx-background-color: #eeeeee;
   -fx-background-radius: 5px;
@@ -83,23 +79,25 @@ Button:hover {
 }
 
 .day-food-text {
-  -fx-font: 18px "Arial";
-  -fx-text-fill: #222831;
+    -fx-font: 12px "Arial";
+    -fx-text-fill: #222831;
 
-  -fx-pref-height: 100px;
-  -fx-pref-width: 100px;
-
-  -fx-alignment: center;
+    -fx-alignment: center;
+    -fx-pref-height: 30px;
+    -fx-pref-width: 100px;
+    -fx-padding: 2px;
+    -fx-border-insets: 2px;
+    -fx-background-insets: 2px;
 }
 
 .day-food-button {
-  -fx-font: 50px "Arial";
-  -fx-pref-height: 100px;
-  -fx-pref-width: 100px;
-  -fx-background-color: #222831;
-  -fx-padding: 4px;
-  -fx-border-insets: 4px;
-  -fx-background-insets: 4px;
+    -fx-font: 35px "Arial";
+    -fx-pref-height: 50px;
+    -fx-pref-width: 100px;
+    -fx-background-color: #222831;
+    -fx-padding: 4px;
+    -fx-border-insets: 4px;
+    -fx-background-insets: 4px;
 }
 
 .morning {

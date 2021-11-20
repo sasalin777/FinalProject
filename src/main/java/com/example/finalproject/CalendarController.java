@@ -128,50 +128,26 @@ public class CalendarController {
 
     @FXML
     public void initialize() {
-
         // get current month
         Calendar cal = Calendar.getInstance();
         this.month = cal.get(Calendar.MONTH) + 1;
         int year = cal.get(Calendar.YEAR);
 
         printCalendar(this.month);
+        int dayOfMonth = cal.get(Calendar.DAY_OF_MONTH);
+        highlightDay(dayOfMonth);
 
         // set text title
         title.setText(monthToStrng(this.month) + " " + year);
-    
-        // get element by ID from root
-        Parent root = title.getParent();
 
-        // get element by ID from root
-        // get the day of mouth
-        int dayOfMonth = cal.get(Calendar.DAY_OF_MONTH);
-        Button btnM = (Button) root.lookup("#morning_" + dayOfMonth);
-        Button btnA = (Button) root.lookup("#afternoon_" + dayOfMonth);
-        Button btnE = (Button) root.lookup("#evening_" + dayOfMonth);
-        Button btnS = (Button) root.lookup("#snacks_" + dayOfMonth);
-
-        // change text button
-        btnM.setText("\uD83C\uDF2E");
-        btnA.setText("\uD83C\uDF72");
-        btnE.setText("\uD83C\uDF55");
-        btnS.setText("\uD83C\uDF72");
-
-        Label labelK = (Label) root.lookup("#kcal_" + dayOfMonth);
-        Label labelD = (Label) root.lookup("#day_" + dayOfMonth);
-
-        labelK.setText("200 Kcal");
-        labelD.setText("" + dayOfMonth);
-
-        highlightDay(10);
-        hiddenGridPane(0);
-        resetDay(13);
-
-        resetDays();
+        //hiddenGridPane(0);
+        //resetDay(13);
+        //resetDays();
     }
 
     public void resetDays() {
-        // get all GridPane childrens from root
-        for(int i = 0; i < 35; i++) {
+        // get all GridPane children from root
+        for(int i = 0; i < 42; i++) {
             resetDay(i);
             showGridPane(i);
         }
@@ -218,7 +194,39 @@ public class CalendarController {
         return dayOfWeek - 2;
     }
 
+    public int getDaysInMonth(int month) {
+        Calendar c = Calendar.getInstance();   // this takes current date
+        c.set(Calendar.MONTH, month - 1);
+        c.set(Calendar.DAY_OF_MONTH, 1);
+
+        int daysInMonth = c.getActualMaximum(Calendar.DAY_OF_MONTH);
+
+        return daysInMonth;
+    }
+
     private void printCalendar(int month) {
+        // get number of days in month
+        int daysInMonth = getDaysInMonth(month);
+        int padding = getPaddingWeekDay(month);
+
+        // get element by ID from root
+        Parent root = title.getParent();
+
+        // add the DAY number
+        for (int i = 1; i <= daysInMonth; i++) {
+            int pos = i + padding;
+            Label labelD = (Label) root.lookup("#day_" + pos);
+            labelD.setText(i + "");
+        };
+
+        // hidden the gridPane without data
+        for (int i = 0; i < 42; i++) {
+            Label labelD = (Label) root.lookup("#day_" + i);
+           // get the text and compare if is equal to 0
+            if(labelD.getText().equals("0")) {
+                hiddenGridPane(i);
+            }
+        };
         printDays(month);
     }
 
@@ -244,7 +252,7 @@ public class CalendarController {
 
         GridPane grid = (GridPane) root.lookup("#" + pos);
         // change background color
-        grid.setStyle("-fx-background-color: #dbf2f5;");
+        grid.setStyle("-fx-background-color: white;");
     }
 
     public void printDay(Day day) {

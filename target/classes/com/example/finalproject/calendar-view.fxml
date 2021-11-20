@@ -4,11 +4,12 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
+
 <GridPane fx:id="gridlayout" alignment="center" hgap="10" stylesheets="@styles.css" vgap="10" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalproject.CalendarController">
 
-    <Text fx:id="title" styleClass="title" text="October 2021" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+    <Text fx:id="title" styleClass="title" text="October 2021" GridPane.columnIndex="1" GridPane.rowIndex="0"  GridPane.columnSpan="2"  />
 
-    <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="7" GridPane.rowIndex="0">
+    <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="6" GridPane.rowIndex="0"  GridPane.columnSpan="2" >
         <Button onAction="#onHandleBefore" styleClass="month-button" text="Before" />
         <Text fx:id="day" styleClass="title" text="Today" GridPane.columnIndex="2" GridPane.rowIndex="0" />
         <Button onAction="#onHandleNext" styleClass="month-button" text="Next" />
@@ -774,4 +775,153 @@
     <!-- /////////////////////// END SECTION DAY /////////////////////// -->
      <!-- /////////////////////// END ROW 6 /////////////////////// -->
 
+
+
+
+
+
+
+
+
+ <!-- /////////////////////// ROW 7 /////////////////////// -->
+    <!-- /////////////////////// SECTION DAY /////////////////////// -->
+    <GridPane alignment="TOP_CENTER" fx:id="35" styleClass="day-section" GridPane.columnIndex="1" GridPane.rowIndex="7" >
+
+        <Label fx:id="day_35" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="kcal_35" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+        <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label  styleClass="day-food-text" text="Afternoon" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Label  styleClass="day-food-text" text="Evening" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <Label  styleClass="day-food-text" text="Snaks" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+        <Button fx:id="morning_35" onAction="#onHandleFood" styleClass="day-food-button,morning" text="+" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Button fx:id="afternoon_35" onAction="#onHandleFood" styleClass="day-food-button,afternoon" text="+" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <Button fx:id="evening_35" onAction="#onHandleFood" styleClass="day-food-button,evening" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+        <Button fx:id="snacks_35" onAction="#onHandleFood" styleClass="day-food-button,snacks" text="+" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+
+    </GridPane>
+    <!-- /////////////////////// END SECTION DAY /////////////////////// -->
+
+    <!-- /////////////////////// SECTION DAY /////////////////////// -->
+    <GridPane alignment="TOP_CENTER" fx:id="36" styleClass="day-section" GridPane.columnIndex="2" GridPane.rowIndex="7" >
+
+        <Label fx:id="day_36" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="kcal_36" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+        <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label  styleClass="day-food-text" text="Afternoon" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Label  styleClass="day-food-text" text="Evening" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <Label  styleClass="day-food-text" text="Snaks" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+        <Button fx:id="morning_36" onAction="#onHandleFood" styleClass="day-food-button,morning" text="+" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Button fx:id="afternoon_36" onAction="#onHandleFood" styleClass="day-food-button,afternoon" text="+" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <Button fx:id="evening_36" onAction="#onHandleFood" styleClass="day-food-button,evening" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+        <Button fx:id="snacks_36" onAction="#onHandleFood" styleClass="day-food-button,snacks" text="+" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+
+    </GridPane>
+    <!-- /////////////////////// END SECTION DAY /////////////////////// -->
+
+    <!-- /////////////////////// SECTION DAY /////////////////////// -->
+    <GridPane alignment="TOP_CENTER" fx:id="37" styleClass="day-section" GridPane.columnIndex="3" GridPane.rowIndex="7" >
+
+        <Label fx:id="day_37" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="kcal_37" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+        <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label  styleClass="day-food-text" text="Afternoon" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Label  styleClass="day-food-text" text="Evening" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <Label  styleClass="day-food-text" text="Snaks" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+        <Button fx:id="morning_37" onAction="#onHandleFood" styleClass="day-food-button,morning" text="+" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Button fx:id="afternoon_37" onAction="#onHandleFood" styleClass="day-food-button,afternoon" text="+" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <Button fx:id="evening_37" onAction="#onHandleFood" styleClass="day-food-button,evening" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+        <Button fx:id="snacks_37" onAction="#onHandleFood" styleClass="day-food-button,snacks" text="+" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+
+    </GridPane>
+    <!-- /////////////////////// END SECTION DAY /////////////////////// -->
+
+    <!-- /////////////////////// SECTION DAY /////////////////////// -->
+    <GridPane alignment="TOP_CENTER" fx:id="38" styleClass="day-section" GridPane.columnIndex="4" GridPane.rowIndex="7" >
+
+        <Label fx:id="day_38" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="kcal_38" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+        <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label  styleClass="day-food-text" text="Afternoon" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Label  styleClass="day-food-text" text="Evening" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <Label  styleClass="day-food-text" text="Snaks" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+        <Button fx:id="morning_38" onAction="#onHandleFood" styleClass="day-food-button,morning" text="+" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Button fx:id="afternoon_38" onAction="#onHandleFood" styleClass="day-food-button,afternoon" text="+" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <Button fx:id="evening_38" onAction="#onHandleFood" styleClass="day-food-button,evening" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+        <Button fx:id="snacks_38" onAction="#onHandleFood" styleClass="day-food-button,snacks" text="+" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+
+    </GridPane>
+    <!-- /////////////////////// END SECTION DAY /////////////////////// -->
+
+    <!-- /////////////////////// SECTION DAY /////////////////////// -->
+    <GridPane alignment="TOP_CENTER" fx:id="39" styleClass="day-section" GridPane.columnIndex="5" GridPane.rowIndex="7" >
+
+        <Label fx:id="day_39" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="kcal_39" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+        <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label  styleClass="day-food-text" text="Afternoon" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Label  styleClass="day-food-text" text="Evening" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <Label  styleClass="day-food-text" text="Snaks" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+        <Button fx:id="morning_39" onAction="#onHandleFood" styleClass="day-food-button,morning" text="+" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Button fx:id="afternoon_39" onAction="#onHandleFood" styleClass="day-food-button,afternoon" text="+" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <Button fx:id="evening_39" onAction="#onHandleFood" styleClass="day-food-button,evening" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+        <Button fx:id="snacks_39" onAction="#onHandleFood" styleClass="day-food-button,snacks" text="+" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+
+    </GridPane>
+    <!-- /////////////////////// END SECTION DAY /////////////////////// -->
+
+    <!-- /////////////////////// SECTION DAY /////////////////////// -->
+    <GridPane alignment="TOP_CENTER" fx:id="40" styleClass="day-section" GridPane.columnIndex="6" GridPane.rowIndex="7" >
+
+        <Label fx:id="day_40" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="kcal_40" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+        <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label  styleClass="day-food-text" text="Afternoon" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Label  styleClass="day-food-text" text="Evening" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <Label  styleClass="day-food-text" text="Snaks" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+        <Button fx:id="morning_40" onAction="#onHandleFood" styleClass="day-food-button,morning" text="+" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Button fx:id="afternoon_40" onAction="#onHandleFood" styleClass="day-food-button,afternoon" text="+" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <Button fx:id="evening_40" onAction="#onHandleFood" styleClass="day-food-button,evening" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+        <Button fx:id="snacks_40" onAction="#onHandleFood" styleClass="day-food-button,snacks" text="+" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+
+    </GridPane>
+    <!-- /////////////////////// END SECTION DAY /////////////////////// -->
+
+    <!-- /////////////////////// SECTION DAY /////////////////////// -->
+    <GridPane alignment="TOP_CENTER" fx:id="41" styleClass="day-section" GridPane.columnIndex="7" GridPane.rowIndex="7" >
+
+        <Label fx:id="day_41" styleClass="title_day" text="0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label fx:id="kcal_41" styleClass="title_kcal" text="0 Kcal" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+
+        <Label  styleClass="day-food-text" text="Morning" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label  styleClass="day-food-text" text="Afternoon" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Label  styleClass="day-food-text" text="Evening" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <Label  styleClass="day-food-text" text="Snaks" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+
+        <Button fx:id="morning_41" onAction="#onHandleFood" styleClass="day-food-button,morning" text="+" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Button fx:id="afternoon_41" onAction="#onHandleFood" styleClass="day-food-button,afternoon" text="+" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <Button fx:id="evening_41" onAction="#onHandleFood" styleClass="day-food-button,evening" text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+
+        <Button fx:id="snacks_41" onAction="#onHandleFood" styleClass="day-food-button,snacks" text="+" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+
+    </GridPane>
+    <!-- /////////////////////// END SECTION DAY /////////////////////// -->
+     <!-- /////////////////////// END ROW 7 /////////////////////// -->
 </GridPane>
