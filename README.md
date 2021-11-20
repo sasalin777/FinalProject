@@ -36,3 +36,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 - [@mau-io](https://www.github.com/mau-io)
 - [@junya-ishibuchi](https://github.com/junya-ishibuchi)
 - [@Kousei0422](https://github.com/Kousei0422)
+- [@sasalin777](https://github.com/sasalin777)
