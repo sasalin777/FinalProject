@@ -51,8 +51,8 @@ Button:hover {
   -fx-alignment: center;
   -fx-padding: 6px;
 
-  -fx-text-fill: #eeeeee;
-  -fx-background-color: #393e46;
+  -fx-text-fill: #393e46;
+
 }
 
 .title_kcal {
@@ -74,6 +74,8 @@ Button:hover {
   -fx-text-fill: #222831;
   -fx-background-color: #eeeeee;
   -fx-background-radius: 5px;
+
+   -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 2, 0, 0, 0);
 }
 
 .day-food-text {

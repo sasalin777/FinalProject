@@ -24,7 +24,7 @@ public class CalendarController {
 
     @FXML
     protected void onHandleBefore() {
-        month--;
+        if(isValidNumberMonth(month)) month--;
         Calendar c = Calendar.getInstance();   // this takes current date
         // change the month
         c.set(Calendar.MONTH, month);
@@ -42,7 +42,7 @@ public class CalendarController {
 
     @FXML
     protected void onHandleNext() {
-        month++;
+        if(isValidNumberMonth(month)) month++;
         title.setText("" + monthToStrng(month));
         printCalendar(month);
     }
@@ -71,12 +71,14 @@ public class CalendarController {
         btnS.setText("\uD83C\uDF72");*/
         // https://www.i2symbol.com/symbols/food
         // Food Symbols 🍞 🍖 🍗 🍔 🍟 🍕 🍳 🍲 🍱 🍘 - i2Symbol
-
     }
 
+    public boolean isValidNumberMonth(int month) {
+        return month >= 1 && month <= 12;
+    }
 
     public String monthToStrng(int month) {
-        month--;
+        if(isValidNumberMonth(month)) month--;
         // tranform month to string
         String monthStr = "";
         switch (month){
@@ -120,6 +122,7 @@ public class CalendarController {
 
         return  monthStr;
     }
+
     @FXML
     public void initialize() {
 
@@ -128,10 +131,7 @@ public class CalendarController {
         this.month = cal.get(Calendar.MONTH) + 1;
         int year = cal.get(Calendar.YEAR);
 
-
-
-        //printCalendar(this.month);
-        printCalendar(11);
+        printCalendar(this.month);
 
         // set text title
         title.setText(monthToStrng(this.month) + " " + year);
@@ -143,9 +143,9 @@ public class CalendarController {
         // get the day of mouth
         int dayOfMonth = cal.get(Calendar.DAY_OF_MONTH);
         Button btnM = (Button) root.lookup("#morning_" + dayOfMonth);
-        Button btnA = (Button) root.lookup("#afternoon_"+ dayOfMonth);
-        Button btnE = (Button) root.lookup("#evening_"+ dayOfMonth);
-        Button btnS = (Button) root.lookup("#snacks_"+ dayOfMonth);
+        Button btnA = (Button) root.lookup("#afternoon_" + dayOfMonth);
+        Button btnE = (Button) root.lookup("#evening_" + dayOfMonth);
+        Button btnS = (Button) root.lookup("#snacks_" + dayOfMonth);
 
         // change text button
         btnM.setText("\uD83C\uDF2E");
@@ -153,23 +153,44 @@ public class CalendarController {
         btnE.setText("\uD83C\uDF55");
         btnS.setText("\uD83C\uDF72");
 
-        Label labelK = (Label) root.lookup("#kcal_"+ dayOfMonth);
-        Label labelD = (Label) root.lookup("#day_"+ dayOfMonth);
+        Label labelK = (Label) root.lookup("#kcal_" + dayOfMonth);
+        Label labelD = (Label) root.lookup("#day_" + dayOfMonth);
 
         labelK.setText("200 Kcal");
         labelD.setText("" + dayOfMonth);
-        labelD.setStyle("-fx-text-fill: #98DDCA;");
 
-        GridPane grid = (GridPane) root.lookup("#" + dayOfMonth);
-        // change background color
-        grid.setStyle("-fx-background-color: #DDDDDD;");
+        highlightDay(10);
+        hiddenGridPane(0);
+        resetDay(13);
+    }
 
-        // hiden gridPanes
-        // get GridPane by id
-        GridPane gridPane = (GridPane) root.lookup("#0");
-        // set class for GridPane
-        gridPane.getStyleClass().add("hidden");
+    public void resetDay(int pos) {
+        // get element by ID from root
+        Parent root = title.getParent();
 
+        // get element by ID from root
+        Button btnM = (Button) root.lookup("#morning_" + pos);
+        Button btnA = (Button) root.lookup("#afternoon_" + pos);
+        Button btnE = (Button) root.lookup("#evening_" + pos);
+        Button btnS = (Button) root.lookup("#snacks_" + pos);
+
+        // change text button
+        btnM.setText("+");
+        btnA.setText("+");
+        btnE.setText("+");
+        btnS.setText("+");
+
+        Label labelK = (Label) root.lookup("#kcal_" + pos);
+        Label labelD = (Label) root.lookup("#day_" + pos);
+
+        labelK.setText("0 Kcal");
+        labelD.setText("0");
+
+        labelD.setStyle("-fx-text-fill: #393e46;");
+
+        GridPane grid = (GridPane) root.lookup("#" + pos);
+        // remove style background color
+        grid.setStyle("-fx-background-color: #eeeeee;");
     }
 
     public int getPaddingWeekDay(int month) {
@@ -180,44 +201,84 @@ public class CalendarController {
 
         // get day of week
         int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
-
         return dayOfWeek - 2;
     }
 
     private void printCalendar(int month) {
+        printDays(month);
+    }
+
+    public void printDays(int month) {
         Day[] days = getData(month);
         // validate if is null days
-        int paddingWeekDay = getPaddingWeekDay(month);
         if (days == null) {
             return;
         }
-        System.out.println("paddingWeekDay " + paddingWeekDay);
+
         // iterate foreach data
         for (Day day : days) {
-            // get parent node
-            Parent parent = title.getParent();
-            // get the day of mouth
-            int dayOfMonth = day.getDay() + paddingWeekDay;
-            System.out.println("#morning_" + dayOfMonth);
-            // get element by ID from root
-            Button btnM = (Button) parent.lookup("#morning_" + dayOfMonth);
-            Button btnA = (Button) parent.lookup("#afternoon_"+ dayOfMonth);
-            Button btnE = (Button) parent.lookup("#evening_"+ dayOfMonth);
-            Button btnS = (Button) parent.lookup("#snacks_"+ dayOfMonth);
-
-            // change text button
-            btnM.setText(day.morning.getIcon());
-            btnA.setText(day.afternoon.getIcon());
-            btnE.setText(day.evening.getIcon());
-            btnS.setText(day.snacks.getIcon());
-
-            Label labelK = (Label) parent.lookup("#kcal_"+ dayOfMonth);
-            Label labelD = (Label) parent.lookup("#day_"+ dayOfMonth);
-
-            labelK.setText(day.getTotalKcal() + " Kcal");
-            labelD.setText("" + (dayOfMonth - paddingWeekDay));
+            printDay(day);
         }
+    }
 
+    public void highlightDay(int pos) {
+        // get element by ID from root
+        Parent root = title.getParent();
+
+        Label labelD = (Label) root.lookup("#day_" + pos);
+        labelD.setStyle("-fx-text-fill: #98DDCA;");
+
+        GridPane grid = (GridPane) root.lookup("#" + pos);
+        // change background color
+        grid.setStyle("-fx-background-color: #dbf2f5;");
+    }
+
+    public void printDay(Day day) {
+        int paddingWeekDay = getPaddingWeekDay(month);
+        int dayOfMonth = day.getDay() + paddingWeekDay;
+
+        // get parent node
+        Parent parent = title.getParent();
+
+        // get element by ID from root
+        Button btnM = (Button) parent.lookup("#morning_" + dayOfMonth);
+        Button btnA = (Button) parent.lookup("#afternoon_" + dayOfMonth);
+        Button btnE = (Button) parent.lookup("#evening_" + dayOfMonth);
+        Button btnS = (Button) parent.lookup("#snacks_" + dayOfMonth);
+
+        // change text button
+        btnM.setText(day.morning.getIcon());
+        btnA.setText(day.afternoon.getIcon());
+        btnE.setText(day.evening.getIcon());
+        btnS.setText(day.snacks.getIcon());
+
+        Label labelK = (Label) parent.lookup("#kcal_" + dayOfMonth);
+        Label labelD = (Label) parent.lookup("#day_" + dayOfMonth);
+
+        labelK.setText(day.getTotalKcal() + " Kcal");
+        labelD.setText("" + (dayOfMonth - paddingWeekDay));
+    }
+
+    public void showGridPane(int pos) {
+        // get element by ID from root
+        Parent root = title.getParent();
+
+        // get GridPane by id
+        GridPane gridPane = (GridPane) root.lookup("#" + pos);
+
+        // remove class for GridPane
+        gridPane.getStyleClass().remove("hidden");
+    }
+
+    public void hiddenGridPane(int pos) {
+        // get element by ID from root
+        Parent root = title.getParent();
+
+        // get GridPane by id
+        GridPane gridPane = (GridPane) root.lookup("#" + pos);
+
+        // set class for GridPane
+        gridPane.getStyleClass().add("hidden");
     }
 
     public Day[] getData(int month) {
