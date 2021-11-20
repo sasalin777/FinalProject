@@ -36,6 +36,7 @@ public class CalendarController {
 
         title.setText( monthToStrng(month) + "  " + dayOfWeek);
 
+        resetDays();
         printCalendar(month);
 
     }
@@ -44,6 +45,8 @@ public class CalendarController {
     protected void onHandleNext() {
         if(isValidNumberMonth(month)) month++;
         title.setText("" + monthToStrng(month));
+
+        resetDays();
         printCalendar(month);
     }
 
@@ -162,6 +165,17 @@ public class CalendarController {
         highlightDay(10);
         hiddenGridPane(0);
         resetDay(13);
+
+        resetDays();
+    }
+
+    public void resetDays() {
+        // get all GridPane childrens from root
+        for(int i = 0; i < 35; i++) {
+            resetDay(i);
+            showGridPane(i);
+        }
+
     }
 
     public void resetDay(int pos) {

@@ -14,6 +14,10 @@ https://www.colorhunt.co/palette/222831393e46d65a31eeeeee
 #EEEEEE
 */
 
+.title {
+    -fx-font: 30px "Arial";
+}
+
 Button:hover {
   -fx-cursor: hand;
 }
