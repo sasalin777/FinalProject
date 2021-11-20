@@ -14,7 +14,7 @@ import java.util.HashMap;
 public class CalendarController {
 
     @FXML
-    private Text title;
+    private Label title;
     private int month = 0;
 
     @FXML
@@ -248,7 +248,7 @@ public class CalendarController {
         Parent root = title.getParent();
 
         Label labelD = (Label) root.lookup("#day_" + pos);
-        labelD.setStyle("-fx-text-fill: #98DDCA;");
+        labelD.setStyle("-fx-text-fill: -fx-color1;");
 
         GridPane grid = (GridPane) root.lookup("#" + pos);
         // change background color

@@ -14,10 +14,20 @@ https://www.colorhunt.co/palette/222831393e46d65a31eeeeee
 #EEEEEE
 */
 
+/*.root {
+    -fx-color1: #98DDCA;
+    -fx-color2: #D5ECC2;
+    -fx-color3: #FFD3B4;
+    -fx-color4: #FFAAA7;
+    -fx-color1-text: #222831;
+}*/
+
 .root {
-    -fx-color1: #FFFF00;
-    -fx-color2: rgb(255,255,0);
-    -fx-color3: rgba(255,255,0, 0.5);
+    -fx-color1: #1DB9C3;
+    -fx-color2: #7027A0;
+    -fx-color3: #C32BAD;
+    -fx-color4: #F56FAD;
+    -fx-color1-text: #EEEEEE;
 }
 
 .title {
@@ -30,7 +40,7 @@ Button:hover {
 
 .title-button {
   -fx-font: 30px "Arial";
-  -fx-text-fill: #98ddca;
+  -fx-text-fill: -fx-color1;
   -fx-padding: 10px;
   -fx-pref-height: 90px;
   -fx-pref-width: 250px;
@@ -72,7 +82,7 @@ Button:hover {
   -fx-pref-height: 80px;
   -fx-pref-width: 250px;
   -fx-text-fill: #222831;
-  -fx-background-color: #eeeeee;
+  -fx-background-color: #e6e6e6;
   -fx-background-radius: 5px;
 
    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 2, 0, 0, 0);
@@ -91,25 +101,36 @@ Button:hover {
 }
 
 .day-food-button {
-    -fx-font: 35px "Arial";
+    -fx-font: 25px "Arial";
     -fx-pref-height: 50px;
     -fx-pref-width: 100px;
-    -fx-background-color: #222831;
+    -fx-background-color: white;
+    -fx-text-fill: -fx-color1-text;
     -fx-padding: 4px;
     -fx-border-insets: 4px;
     -fx-background-insets: 4px;
+
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 2, 0, 0, 0);
 }
 
 .morning {
-  -fx-background-color: #98ddca;
+  -fx-background-color: -fx-color1;
 }
 .afternoon {
-  -fx-background-color: #d5ecc2;
+  -fx-background-color: -fx-color2;
 }
 .evening {
-  -fx-background-color: #ffd3b4;
+  -fx-background-color: -fx-color3;
 }
 .snacks {
-  -fx-background-color: #ffaaa7;
+  -fx-background-color: -fx-color4;
 }
 /* ---------------- END SECTION DAY ----------------------*/
+
+.root {
+    -fx-background-color: #222831;
+}
+
+.title {
+ -fx-text-fill: #EEEEEE;
+}
