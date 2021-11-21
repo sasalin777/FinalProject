@@ -24,7 +24,7 @@ public class CalendarController {
 
     @FXML
     protected void onHandleBefore() {
-        if(isValidNumberMonth(month)) month--;
+        month--;
         Calendar c = Calendar.getInstance();   // this takes current date
         // change the month
         c.set(Calendar.MONTH, month);
@@ -35,9 +35,8 @@ public class CalendarController {
         int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
         int dayOfMonth = c.get(Calendar.DAY_OF_MONTH);
         int year = c.get(Calendar.YEAR);
-
+        if (month % 12 == 0 ) {year -= 1;}
         title.setText( monthToStrng(month) + "  " + year);
-
         resetDays();
         printCalendar(month);
 
@@ -92,10 +91,14 @@ public class CalendarController {
          {
             if (month >= 12) {
                 month = month % 12;
-                if (month == 0) {
+               }
+            if (month == 0) {
                     month = 12;
                 }
-            }
+            if (month < 0) {
+                    month = (month % 12) + 12;
+                }
+
         }
         // tranform month to string
         String monthStr = "";
