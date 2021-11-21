@@ -1,0 +1,60 @@
+.root {
+    -fx-color1: #1DB9C3;
+    -fx-color2: #7027A0;
+    -fx-color3: #C32BAD;
+    -fx-color4: #F56FAD;
+    -fx-color5: #13E900;
+    -fx-color6: #03C3FF;
+    -fx-color1-text: #EEEEEE;
+}
+
+.mainAte{
+    -fx-text-align:center;
+    -fx-font-size:40px;
+    -fx-padding:5px;
+}
+.askAte{
+    -fx-font: 25px "Karla";
+}
+
+.menuText{
+    -fx-font: 20px "Karla";
+}
+
+.caloriesText{
+    -fx-font: 20px "Karla";
+}
+
+.kcal{
+    -fx-font: 15px "Karla"
+}
+.addButton{
+    -fx-background-color: -fx-color5;
+    -fx-border-radius:50%;
+}
+
+.addButton:hover{
+    -fx-opacity:0.7;
+}
+
+.addButton:action{
+    -fx-opacity: 1;
+}
+
+.totalCalories{
+    -fx-font: 20px "Karla";
+}
+
+.saveButton{
+    -fx-float:right;
+    -fx-background-color: -fx-color6;
+    -fx-border-radius: 50%;
+}
+
+.saveButton:hover{
+    -fx-opacity: 0.7;
+}
+
+.saveButton:active{
+    -fx-opacity: 1;
+}
