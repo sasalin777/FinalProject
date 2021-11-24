@@ -12,9 +12,9 @@ public class PreDriver extends Application {
 
     @Override
     public void start(Stage stage) throws IOException{
-        FXMLLoader fxmlLoader = new FXMLLoader(DriverApplication.class.getResource("registration-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(DriverApplication.class.getResource("update-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1280, 1280);
-        scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("registrationStyle.css")).toExternalForm());
+        scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("updateStyle.css")).toExternalForm());
         stage.setTitle("EnterFood");
         stage.setScene(scene);
         stage.show();

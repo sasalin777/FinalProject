@@ -5,6 +5,7 @@
     -fx-color4: #F56FAD;
     -fx-color5: #13E900;
     -fx-color6: #03C3FF;
+    -fx-color7: #ED5249;
     -fx-color1-text: #EEEEEE;
 }
 
@@ -45,16 +46,31 @@
     -fx-font: 20px "Karla";
 }
 
-.saveButton{
+.deleteButton{
+    -fx-float:right;
+    -fx-background-color: -fx-color7;
+    -fx-border-radius: 50%;
+}
+
+.deleteButton:hover{
+    -fx-opacity: 0.7;
+}
+
+.deleteButton:pressed{
+    -fx-opacity: 1;
+}
+
+.updateButton{
     -fx-float:right;
     -fx-background-color: -fx-color6;
     -fx-border-radius: 50%;
 }
 
-.saveButton:hover{
+.updateButton:hover{
     -fx-opacity: 0.7;
 }
 
-.saveButton:pressed{
+.updateButton:pressed{
     -fx-opacity: 1;
 }
+
