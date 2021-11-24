@@ -7,11 +7,4 @@ import javafx.scene.text.Text;
 import org.w3c.dom.Element;
 
 public class Registration {
-
-    public GridPane textField;
-
-    public void addMenu(){
-
-
-    }
 }
