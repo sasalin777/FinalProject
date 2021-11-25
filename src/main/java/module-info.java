@@ -7,6 +7,7 @@ module com.example.finalproject {
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires java.desktop;
 
     opens com.example.finalproject to javafx.fxml;
     exports com.example.finalproject;
