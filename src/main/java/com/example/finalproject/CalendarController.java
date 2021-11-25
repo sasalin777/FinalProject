@@ -38,19 +38,26 @@ public class CalendarController {
 
         // get day of week
         int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
+        int dayOfMonth = c.get(Calendar.DAY_OF_MONTH);
+
         int year = c.get(Calendar.YEAR);
         if (month % 12 == 0 ) {year -= 1;}
         title.setText( monthToStrng(month) + "  " + year);
         resetDays();
         printCalendar(month);
 
+
     }
 
     @FXML
     protected void onHandleNext() {
-        if(isValidNumberMonth(month)) month++;
-        title.setText("" + monthToStrng(month));
-
+        month++;
+        Calendar cal = Calendar.getInstance();
+        cal.set(Calendar.MONTH, month);
+        cal.set(Calendar.DAY_OF_MONTH,1);
+        int year = cal.get(Calendar.YEAR);
+        if (month % 12 == 0 ) {year -= 1;}
+        title.setText( monthToStrng(month) + "  " + year);
         resetDays();
         printCalendar(month);
     }
@@ -91,48 +98,60 @@ public class CalendarController {
     }
 
     public boolean isValidNumberMonth(int month) {
-        return month >= 1 && month <= 12;
+        return month >=1 && month <=12;
     }
 
     public String monthToStrng(int month) {
-        if(isValidNumberMonth(month)) month--;
+        if(isValidNumberMonth(month) == false) ;
+         {
+            if (month >= 12) {
+                month = month % 12;
+               }
+            if (month == 0) {
+                    month = 12;
+                }
+            if (month < 0) {
+                    month = (month % 12) + 12;
+                }
+
+        }
         // tranform month to string
         String monthStr = "";
         switch (month){
-            case 0:
+            case 1:
                 monthStr = "January";
                 break;
-            case 1:
+            case 2:
                 monthStr = "February";
                 break;
-            case 2:
+            case 3:
                 monthStr = "March";
                 break;
-            case 3:
+            case 4:
                 monthStr = "April";
                 break;
-            case 4:
+            case 5:
                 monthStr = "May";
                 break;
-            case 5:
+            case 6:
                 monthStr = "June";
                 break;
-            case 6:
+            case 7:
                 monthStr = "July";
                 break;
-            case 7:
+            case 8:
                 monthStr = "August";
                 break;
-            case 8:
+            case 9:
                 monthStr = "September";
                 break;
-            case 9:
+            case 10:
                 monthStr = "October";
                 break;
-            case 10:
+            case 11:
                 monthStr = "November";
                 break;
-            case 11:
+            case 12:
                 monthStr = "December";
                 break;
         }

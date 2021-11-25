@@ -51,7 +51,11 @@
         <GridPane.margin>
             <Insets top="15"/>
         </GridPane.margin>
+<<<<<<< HEAD
     <Button fx:id="addButton" styleClass="addButton" text="Add menu" onAction="#addMenuClicked"/>
+=======
+    <Button fx:id="addButton" styleClass="addButton" onAction="#addMenuClicked" text="Add menu"/>
+>>>>>>> d3978efb4003c9286f0bd1a73cd76714f87c24d1
     </GridPane>
 
 
@@ -66,7 +70,11 @@
         <GridPane.margin>
             <Insets top="20" left="250"/>
         </GridPane.margin>
+<<<<<<< HEAD
     <Button fx:id="saveButton" styleClass="saveButton" text="SAVE" onAction="#buttonClicked"/>
+=======
+    <Button fx:id="saveButton" styleClass="saveButton" onAction="#buttonClicked" text="SAVE"/>
+>>>>>>> d3978efb4003c9286f0bd1a73cd76714f87c24d1
     </GridPane>
 
 </GridPane>
