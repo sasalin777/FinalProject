@@ -2,12 +2,17 @@ package com.example.finalproject;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
+import java.io.IOException;
 import java.util.Calendar;
 import java.util.HashMap;
 
@@ -34,6 +39,7 @@ public class CalendarController {
         // get day of week
         int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
         int dayOfMonth = c.get(Calendar.DAY_OF_MONTH);
+
         int year = c.get(Calendar.YEAR);
         if (month % 12 == 0 ) {year -= 1;}
         title.setText( monthToStrng(month) + "  " + year);
@@ -56,16 +62,16 @@ public class CalendarController {
         printCalendar(month);
     }
 
-    @FXML
-    public void onHandleFood(ActionEvent actionEvent) {
-        Button btnClicked = (Button) actionEvent.getSource();
-        title.setText(btnClicked.getId());
-        // get the parent node ID
-        Parent parent = btnClicked.getParent();
-        // get the parent node ID
-        String parentId = parent.getId();
-        title.setText(parentId);
-        btnClicked.setText("\uD83C\uDF72");
+//    @FXML
+//    public void onHandleFood(ActionEvent actionEvent) {
+//        Button btnClicked = (Button) actionEvent.getSource();
+//        title.setText(btnClicked.getId());
+//        // get the parent node ID
+//        Parent parent = btnClicked.getParent();
+//        // get the parent node ID
+//        String parentId = parent.getId();
+//        title.setText(parentId);
+//        btnClicked.setText("\uD83C\uDF72");
 
         /*
         // search a element by id
@@ -80,6 +86,15 @@ public class CalendarController {
         btnS.setText("\uD83C\uDF72");*/
         // https://www.i2symbol.com/symbols/food
         // Food Symbols 🍞 🍖 🍗 🍔 🍟 🍕 🍳 🍲 🍱 🍘 - i2Symbol
+    //}
+
+    @FXML
+    public void onHandleFood(ActionEvent actionEvent) throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("registration-view.fxml"));
+        Stage stage = new Stage(StageStyle.DECORATED);
+        stage.setTitle("What did you eat?");
+        stage.setScene(new Scene(parent));
+        stage.show();
     }
 
     public boolean isValidNumberMonth(int month) {

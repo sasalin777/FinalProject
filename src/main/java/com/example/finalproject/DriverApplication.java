@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class DriverApplication extends Application {
     @Override
@@ -20,6 +21,7 @@ public class DriverApplication extends Application {
         stage.setTitle("DietTrack");
         stage.setScene(scene);
         stage.show();
+
     }
 
     public static void main(String[] args) {
