@@ -51,7 +51,7 @@
         <GridPane.margin>
             <Insets top="15"/>
         </GridPane.margin>
-    <Button fx:id="addButton" styleClass="addButton" text="Add menu"/>
+    <Button fx:id="addButton" styleClass="addButton" text="Add menu" onAction="#addMenuClicked"/>
     </GridPane>
 
 
@@ -59,14 +59,14 @@
         <GridPane.margin>
             <Insets top="30" left="140"/>
         </GridPane.margin>
-        <Text fx:id="totalCalories" styleClass="totalCalories" text="Total calories: 0 kcal"/>
+        <Text fx:id="totalCalories" styleClass="totalCalories"/>
     </GridPane>
 
     <GridPane GridPane.columnIndex="0" GridPane.rowIndex="12">
         <GridPane.margin>
             <Insets top="20" left="250"/>
         </GridPane.margin>
-    <Button fx:id="saveButton" styleClass="saveButton" text="SAVE"/>
+    <Button fx:id="saveButton" styleClass="saveButton" text="SAVE" onAction="#buttonClicked"/>
     </GridPane>
 
 </GridPane>
