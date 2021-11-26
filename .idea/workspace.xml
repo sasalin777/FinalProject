@@ -4,34 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="acba87ee-39f0-4e21-b291-81125d193484" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_mac_17_ea_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_mac_17_ea_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_mac_17_ea_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_mac_17_ea_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_media_mac_17_ea_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_web_mac_17_ea_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FinalProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FinalProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalproject/CalendarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalproject/CalendarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalproject/DriverApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalproject/DriverApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalproject/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalproject/Registration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/finalproject/calendar-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/finalproject/calendar-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/finalproject/registration-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/finalproject/registration-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/finalproject/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/finalproject/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/finalproject/CalendarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/finalproject/CalendarController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/finalproject/DriverApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/finalproject/DriverApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/finalproject/Registration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/finalproject/Registration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/finalproject/calendar-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/finalproject/calendar-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/finalproject/registration-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/finalproject/registration-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/finalproject/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/finalproject/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
-    </list>
+    <list default="true" id="8b3cecdb-2261-4b00-9416-e8d553135fe8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
