@@ -6,15 +6,14 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Objects;
 
 public class DriverApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(DriverApplication.class.getResource("calendar-view.fxml"));
         // get the width and height of the screen
-        double width = java.awt.Toolkit.getDefaultToolkit().getScreenSize().getWidth();
-        double height = java.awt.Toolkit.getDefaultToolkit().getScreenSize().getHeight();
+        double width = java.awt.Toolkit.getDefaultToolkit().getScreenSize().getWidth() - 100;
+        double height = java.awt.Toolkit.getDefaultToolkit().getScreenSize().getHeight() - 100;
         // set the scene
         Scene scene = new Scene(fxmlLoader.load(), width, height);
       

@@ -19,8 +19,14 @@ import java.util.HashMap;
 public class CalendarController {
 
     @FXML
-    private Label title;
-    private int month = 0;
+    private
+    Label title;
+
+    private
+    int month = 0;
+
+    private
+    Data db = Data.getInstance();
 
     @FXML
     protected void onHelloButtonClick() {
@@ -45,8 +51,6 @@ public class CalendarController {
         title.setText( monthToStrng(month) + "  " + year);
         resetDays();
         printCalendar(month);
-
-
     }
 
     @FXML
@@ -62,37 +66,37 @@ public class CalendarController {
         printCalendar(month);
     }
 
-//    @FXML
-//    public void onHandleFood(ActionEvent actionEvent) {
-//        Button btnClicked = (Button) actionEvent.getSource();
-//        title.setText(btnClicked.getId());
-//        // get the parent node ID
-//        Parent parent = btnClicked.getParent();
-//        // get the parent node ID
-//        String parentId = parent.getId();
-//        title.setText(parentId);
-//        btnClicked.setText("\uD83C\uDF72");
+    @FXML
+    protected void onHandleUpdate() {
+        resetDays();
+        printCalendar(month);
+    }
 
-        /*
-        // search a element by id
-        Button btnM = (Button) parent.lookup("#morning_" + parentId);
-        Button btnA = (Button) parent.lookup("#afternoon_" + parentId);
-        Button btnE = (Button) parent.lookup("#evening_" + parentId);
-        Button btnS = (Button) parent.lookup("#snacks_" + parentId);
-        // change text button
-        btnM.setText("\uD83C\uDF2E");
-        btnA.setText("\uD83C\uDF72");
-        btnE.setText("\uD83C\uDF55");
-        btnS.setText("\uD83C\uDF72");*/
-        // https://www.i2symbol.com/symbols/food
-        // Food Symbols 🍞 🍖 🍗 🍔 🍟 🍕 🍳 🍲 🍱 🍘 - i2Symbol
-    //}
 
     @FXML
     public void onHandleFood(ActionEvent actionEvent) throws IOException {
+
+        // get the id
+        Button btnClicked = (Button) actionEvent.getSource();
+        // get id of parent
+        String id = btnClicked.getId();
+        // get id of parent
+        String parentId = btnClicked.getParent().getId();
+        int padding = getPaddingWeekDay(month);
+
+        // parentId to int
+        int parentIdInt = Integer.parseInt(parentId);
+        int day =  parentIdInt + padding;
+
+        db.setDay(day);
+        db.setId(id);
+        db.setMonth(month);
+
         Parent parent = FXMLLoader.load(getClass().getResource("registration-view.fxml"));
         Stage stage = new Stage(StageStyle.DECORATED);
-        stage.setTitle("What did you eat?");
+
+        stage.setTitle("What did you eat? " + id + "  "  + day);
+
         stage.setScene(new Scene(parent));
         stage.show();
     }
@@ -342,37 +346,67 @@ public class CalendarController {
     }
 
     public HashMap<Integer, Day[]> createFakeData() {
+
         // create hashmap
-        HashMap<Integer, Day[]> months = new HashMap<>();
+        //HashMap<Integer, Day[]> months = new HashMap<>();
 
         Food[] f = {
-                new Food("Fries", 200),
-                new Food("Ice cream", 100),
-                new Food("Big burger", 300),
-                new Food("Coca cola", 50),
-                new Food("Coffee", 100),
+            new Food("Fries", 200),
+            new Food("Ice cream", 100),
+            new Food("Big burger", 300),
+            new Food("Coca cola", 50),
+            new Food("Coffee", 200),
         };
+
+        Food[] f2 = {
+
+        };
+
         Menu m = new Menu(f, "\uD83C\uDF54");
+        Menu empty = new Menu(f2, "+");
 
         Day[] days = {
                 new Day(1,2021, m, m, m, m),
                 new Day(2,2021, m, m, m, m),
-                new Day(3,2021, m, m, m, m),
+                new Day(3,2021, empty, empty, empty, empty),
                 new Day(4,2021, m, m, m, m),
+                new Day(5,2021, empty, empty, empty, empty),
+                new Day(6,2021, empty, empty, empty, empty),
+                new Day(7,2021, empty, empty, empty, empty),
+                new Day(8,2021, empty, empty, empty, empty),
+                new Day(9,2021, empty, empty, empty, empty),
+                new Day(10,2021, empty, empty, empty, empty),
+                new Day(11,2021, empty, empty, empty, empty),
+                new Day(12,2021, empty, empty, empty, empty),
+                new Day(13,2021, empty, empty, empty, empty),
+                new Day(14,2021, empty, empty, empty, empty),
+                new Day(15,2021, empty, empty, empty, empty),
+                new Day(16,2021, empty, empty, empty, empty),
+                new Day(17,2021, empty, empty, empty, empty),
+                new Day(18,2021, empty, empty, empty, empty),
+                new Day(19,2021, empty, empty, empty, empty),
+                new Day(20,2021, empty, empty, empty, empty),
+                new Day(21,2021, empty, empty, empty, empty),
+                new Day(22,2021, empty, empty, empty, empty),
+                new Day(23,2021, empty, empty, empty, empty),
+                new Day(24,2021, empty, empty, empty, empty),
+                new Day(25,2021, empty, empty, empty, empty),
+                new Day(26,2021, empty, empty, empty, empty),
+                new Day(27,2021, empty, empty, empty, empty),
+                new Day(28,2021, empty, empty, empty, empty),
+                new Day(29,2021, empty, empty, empty, empty),
+                new Day(30,2021, empty, empty, empty, empty)
         };
 
         System.out.println(days[0].getTotalKcal());
         System.out.println(days[0].morning.icon);
 
-        // add key and value
-        // november
-        months.put(10, days); // oct
-        months.put(11, days); // nov
-        months.put(12, days); // dec
+        // add key and value to hashmap
+        if(!db.isMonthSaved(10)) db.saveMonth(10, days); // oct
+        if(!db.isMonthSaved(11)) db.saveMonth(11, days); // nov
+        if(!db.isMonthSaved(12)) db.saveMonth(12, days); // dic
 
-        //System.out.println(months.get(11)[0].toString());
-
-        return months;
+        return db.getMonths();
 
     }
 }

@@ -6,12 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="8b3cecdb-2261-4b00-9416-e8d553135fe8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalproject/CalendarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalproject/CalendarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalproject/DriverApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalproject/DriverApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalproject/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalproject/Registration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalproject/Update.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/finalproject/Update.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/finalproject/Update.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/finalproject/calendar-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/finalproject/calendar-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/finalproject/registration-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/finalproject/registration-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/finalproject/update-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/finalproject/update-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/finalproject/updateStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/finalproject/updateStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/finalproject/update-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/finalproject/updateStyle.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/finalproject/CalendarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/finalproject/CalendarController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/finalproject/DriverApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/finalproject/DriverApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/finalproject/Registration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/finalproject/Registration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/finalproject/Update.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/finalproject/calendar-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/finalproject/calendar-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/finalproject/registration-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/finalproject/registration-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/finalproject/update-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/finalproject/updateStyle.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +50,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Assignment4-Java" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">

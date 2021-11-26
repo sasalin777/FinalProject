@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Text?>
 
 <?import javafx.geometry.Insets?>
+
 <GridPane alignment="CENTER"
           xmlns="http://javafx.com/javafx"
           xmlns:fx="http://javafx.com/fxml"
@@ -16,13 +14,14 @@
           fx:id="gridLayout"
           stylesheets="@registrationStyle.css"
           styleClass="main">
+
     <GridPane GridPane.columnIndex="0" GridPane.rowIndex="0">
         <TextField fx:id="mainAte" styleClass ="mainAte" layoutX="42.0" layoutY="162.0" prefHeight="102.0" alignment="CENTER" prefWidth="102.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
             <GridPane.margin>
                 <Insets right="20"/>
             </GridPane.margin>
         </TextField>
-        <Label text="What did you eat?" styleClass="askAte" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Text text="What did you eat? 🍞 🍖 🍗 🍔 🍟 🍕 🍳 🍲 🍱 🍘 " styleClass="askAte" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
         <GridPane.margin>
             <Insets bottom="30"/>
         </GridPane.margin>
@@ -39,11 +38,15 @@
 
     <GridPane fx:id="textField" GridPane.columnIndex="0" GridPane.rowIndex="3">
         <TextField fx:id="menu" styleClass="menuField" layoutX="20.0" layoutY="200.0" prefHeight="16.0" prefWidth="150.0" GridPane.rowIndex="0" GridPane.columnIndex="0">
+
         <GridPane.margin>
             <Insets right="30"/>
         </GridPane.margin>
+
         </TextField>
+
         <TextField fx:id="calories" styleClass="caloriesField" layoutX="20.0" layoutY="100.0" prefHeight="16.0" prefWidth="60.0" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
         <Label text="kcal" styleClass="kcal" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
     </GridPane>
 
@@ -51,22 +54,21 @@
         <GridPane.margin>
             <Insets top="15"/>
         </GridPane.margin>
-    <Button fx:id="addButton" styleClass="addButton" onAction="#addMenuClicked" text="Add menu"/>
+    <Button fx:id="addButton" styleClass="addButton" onAction="#onHandleAdd" text="Add Food"/>
     </GridPane>
-
 
     <GridPane GridPane.columnIndex="0" GridPane.rowIndex="10">
         <GridPane.margin>
             <Insets top="30" left="140"/>
         </GridPane.margin>
-        <Text fx:id="totalCalories" styleClass="totalCalories" text="Total calories: 0 kcal"/>
+        <Label fx:id="totalCalories" styleClass="totalCalories" text="Total calories: 0 kcal"/>
     </GridPane>
 
     <GridPane GridPane.columnIndex="0" GridPane.rowIndex="12">
         <GridPane.margin>
             <Insets top="20" left="250"/>
         </GridPane.margin>
-    <Button fx:id="saveButton" styleClass="saveButton" onAction="#buttonClicked" text="SAVE"/>
+    <Button fx:id="saveButton" styleClass="saveButton" onAction="#onHandleSave" text="SAVE"/>
     </GridPane>
 
 </GridPane>

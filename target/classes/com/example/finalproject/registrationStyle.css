@@ -7,7 +7,9 @@
     -fx-color6: #03C3FF;
     -fx-color1-text: #EEEEEE;
 }
-
+.root{
+    -fx-selection-bar-text: red;
+}
 .mainAte{
     -fx-text-align:center;
     -fx-font-size:40px;
