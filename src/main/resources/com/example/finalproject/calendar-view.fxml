@@ -2,12 +2,14 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-
 
 <GridPane fx:id="gridlayout"  alignment="center" hgap="10" stylesheets="@styles.css" vgap="10" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.finalproject.CalendarController">
 
     <Label fx:id="title" styleClass="title" text="November 2021" GridPane.columnIndex="1" GridPane.rowIndex="0"  GridPane.columnSpan="2"  />
+
+    <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="3" GridPane.rowIndex="0"  GridPane.columnSpan="1" >
+        <Button onAction="#onHandleUpdate" styleClass="month-button" text="Update" />
+    </HBox>
 
     <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="6" GridPane.rowIndex="0"  GridPane.columnSpan="2" >
         <Button onAction="#onHandleBefore" styleClass="month-button" text="Before" />

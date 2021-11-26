@@ -11,10 +11,16 @@ public class DriverApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(DriverApplication.class.getResource("calendar-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(),1280,1700);
+        // get the width and height of the screen
+        double width = java.awt.Toolkit.getDefaultToolkit().getScreenSize().getWidth() - 100;
+        double height = java.awt.Toolkit.getDefaultToolkit().getScreenSize().getHeight() - 100;
+        // set the scene
+        Scene scene = new Scene(fxmlLoader.load(), width, height);
+      
         stage.setTitle("DietTrack");
         stage.setScene(scene);
         stage.show();
+
     }
 
     public static void main(String[] args) {
